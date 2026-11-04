@@ -72,6 +72,8 @@ ws.append([
 
 # Save Excel
 wb.save(file_path)
+print("Excel saved successfully!")
+print("File location:", file_path)
 # Check whether Excel file exists
 if os.path.exists(file_path):
 
@@ -103,35 +105,4 @@ if os.path.exists(file_path):
 else:
     print("Excel workbook not found!")
 
-print("Excel saved successfully!")
-print("File location:", file_path)
-'''
-pyautogui.press('win')
-pyautogui.write('excel')
-pyautogui.press('enter')
-pyautogui.press('enter')
-#wait for the page to load
-time.sleep(5)
 
-# Enter headers in Excel
-for header in headers:
-    pyautogui.write(header, interval=0.1)
-    pyautogui.press("tab")
-
-# Move to next row
-pyautogui.press("enter")
-
-
-# Enter row data
-for value in data:
-    pyautogui.write(value, interval=0.1)
-    pyautogui.press("tab")
-
-# Finish row
-pyautogui.press("enter")
-
-pyautogui.hotkey('ctrl','s')
-pyautogui.typewrite('daily_report_'+file_date+'.xlsx')
-pyautogui.press('enter')
-pyautogui.screenshot('daily_report_'+file_date+'.png')
-'''
